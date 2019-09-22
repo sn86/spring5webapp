@@ -28,7 +28,6 @@ public class Book {
 	private String isbn;
 	
 	@OneToOne
-	@JoinColumn(name="publisher_id", referencedColumnName="id")
     private Publisher publisher;
     
     public Book() {

@@ -33,13 +33,13 @@ public class Author {
     }
 
 	public Author(String firstName, String lastName) {
-		super();
+		
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
 	
     public Author(String firstName, String lastName, Set<Book> books) {
-		super();
+		
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.books = books;

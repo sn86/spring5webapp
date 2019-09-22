@@ -35,41 +35,64 @@ public class BootStrap implements ApplicationListener<ContextRefreshedEvent>{
 	}
 	 private void initData(){
 
+//	        //Eric
+//	        Author eric = new Author("Eric", "Evans");
+//	        Publisher publisherAmerica = new Publisher("am","America");
+//	        
+//	        publishRepository.save(publisherAmerica);
+//	        
+//	        Book  ddd = new Book("Domain Driven Design", "1234",publisherAmerica);
+//	        eric.getBooks().add(ddd);
+//	        ddd.getAuthors().add(eric);
+//
+//	        authorRepository.save(eric);
+//	        bookRepository.save(ddd);
+//	        
+//	      //  publisherAmerica.setBook(ddd);
+//	       
+//
+//
+//	        //Rod
+//	        Author rod = new Author("Rod", "Johnson");
+//	        Publisher publisherPakistan = new Publisher("pk","Pakistan");
+//	        publishRepository.save(publisherPakistan);
+//	        
+//	        Book noEJB = new Book("J2EE Development without EJB", "23444", publisherAmerica );
+//	        
+//	        Book ejb = new Book("J2EE Development EJB", "23444", publisherPakistan );
+//	        rod.getBooks().add(noEJB);
+//	        rod.getBooks().add(ejb);
+//	        
+//	        noEJB.getAuthors().add(rod);
+//	        ejb.getAuthors().add(rod);
+//
+//	        authorRepository.save(rod);
+//	        bookRepository.save(noEJB);
+//	        bookRepository.save(ejb);
+
+	        Publisher publisher = new Publisher();
+	        publisher.setName("foo");
+	        publisher.setAddress("12th Street, LA");
+	        publishRepository.save(publisher);
+
 	        //Eric
 	        Author eric = new Author("Eric", "Evans");
-	        Publisher publisherAmerica = new Publisher("am","America");
-	        
-	        publishRepository.save(publisherAmerica);
-	        
-	        Book  ddd = new Book("Domain Driven Design", "1234",publisherAmerica);
+	        Book  ddd = new Book("Domain Driven Design", "1234", publisher);
 	        eric.getBooks().add(ddd);
 	        ddd.getAuthors().add(eric);
 
 	        authorRepository.save(eric);
 	        bookRepository.save(ddd);
-	        
-	      //  publisherAmerica.setBook(ddd);
-	       
 
 
 	        //Rod
 	        Author rod = new Author("Rod", "Johnson");
-	        Publisher publisherPakistan = new Publisher("pk","Pakistan");
-	        publishRepository.save(publisherPakistan);
-	        
-	        Book noEJB = new Book("J2EE Development without EJB", "23444", publisherAmerica );
-	        
-	        Book ejb = new Book("J2EE Development EJB", "23444", publisherPakistan );
+	        Book noEJB = new Book("J2EE Development without EJB", "23444", publisher );
 	        rod.getBooks().add(noEJB);
-	        rod.getBooks().add(ejb);
-	        
 	        noEJB.getAuthors().add(rod);
-	        ejb.getAuthors().add(rod);
 
 	        authorRepository.save(rod);
 	        bookRepository.save(noEJB);
-	        bookRepository.save(ejb);
-	        
 	       
 	    }
 }

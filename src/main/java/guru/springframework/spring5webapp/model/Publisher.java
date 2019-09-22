@@ -15,33 +15,19 @@ public class Publisher {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
-	
-	@OneToOne(mappedBy="publisher")
-	private Book book;
-	
-	public Publisher(Book book, String name, String address) {
-		super();
-		this.book = book;
-		this.name = name;
-		this.address = address;
+	public Publisher() {
 	}
+
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Book getBook() {
-		return book;
-	}
-	public void setBook(Book book) {
-		this.book = book;
-	}
 	private String name;
 
 	
 	public Publisher(String name, String address) {
-		super();
 		this.name = name;
 		this.address = address;
 	}
